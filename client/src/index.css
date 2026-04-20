@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* QALYA Brand — Teal */
+    --background: 50 20% 97%;
+    --foreground: 35 18% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 35 18% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 35 18% 14%;
+    --primary: 183 99% 22%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 183 40% 92%;
+    --secondary-foreground: 183 99% 22%;
+    --muted: 50 10% 93%;
+    --muted-foreground: 35 8% 46%;
+    --accent: 183 35% 88%;
+    --accent-foreground: 183 99% 18%;
+    --destructive: 338 65% 40%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 35 12% 84%;
+    --input: 35 12% 84%;
+    --ring: 183 99% 22%;
+    --radius: 0.5rem;
+
+    --teal: #01696F;
+    --teal-dark: #0C4E54;
+    --teal-light: #E6F2F3;
+    --cream: #F7F6F2;
+  }
+
+  .dark {
+    --background: 200 15% 8%;
+    --foreground: 35 10% 88%;
+    --card: 200 12% 11%;
+    --card-foreground: 35 10% 88%;
+    --popover: 200 12% 11%;
+    --popover-foreground: 35 10% 88%;
+    --primary: 183 60% 48%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 183 20% 18%;
+    --secondary-foreground: 183 60% 75%;
+    --muted: 200 10% 18%;
+    --muted-foreground: 35 8% 55%;
+    --accent: 183 20% 20%;
+    --accent-foreground: 183 60% 75%;
+    --destructive: 338 55% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 200 10% 22%;
+    --input: 200 10% 22%;
+    --ring: 183 60% 48%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}
+
+/* Progress bar animation */
+@keyframes progress-fill {
+  from { width: 0; }
+}
+
+/* Likert scale custom styles */
+.likert-option input[type="radio"] { display: none; }
+.likert-option label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.likert-option label .dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #D4D1CA;
+  display: flex;
+  align-items: center;
+  justify-content: font-size;
+  transition: all 0.15s ease;
+}
+.likert-option input[type="radio"]:checked + label .dot {
+  border-color: var(--teal);
+  background: var(--teal);
+  color: white;
+}
+.likert-option label:hover .dot {
+  border-color: var(--teal);
+  transform: scale(1.1);
+}
+
+/* Radar chart container */
+.radar-container { position: relative; }
+
+/* Score badge colors */
+.score-excellent { background: #01696F; color: white; }
+.score-good      { background: #437A22; color: white; }
+.score-medium    { background: #D19900; color: white; }
+.score-low       { background: #964219; color: white; }
+.score-critical  { background: #A12C7B; color: white; }
