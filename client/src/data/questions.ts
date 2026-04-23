@@ -177,13 +177,65 @@ export const AXES: Axe[] = [
   },
 ];
 
+  // ── AXE 12 — Charge & Régulation de l'effort ───────────────────────────────
+  {
+    id: 12,
+    dimension: "Soutenabilité de la performance",
+    dimensionEn: "Performance Sustainability",
+    title: "Charge & Régulation",
+    titleEn: "Workload & Recovery",
+    items: [
+      { text: "Mon volume de travail habituel me permet de maintenir un niveau d'énergie satisfaisant tout au long de la semaine.", textEn: "My usual workload allows me to maintain a satisfying energy level throughout the week." },
+      { text: "Mon organisation me donne suffisamment d'espaces de récupération (pauses, temps calmes) pour rester efficace sur la durée.", textEn: "My organisation gives me enough recovery spaces (breaks, quiet time) to stay effective over time." },
+      { text: "Lorsque la charge augmente de façon ponctuelle, je parviens facilement à la gérer sans que cela déborde sur ma vie personnelle.", textEn: "When workload temporarily increases, I can easily manage it without it spilling over into my personal life.", isControl: true },
+      { text: "Les priorités qui me sont fixées sont suffisamment claires pour que je puisse organiser mon travail sans sentiment de surcharge inutile.", textEn: "The priorities set for me are clear enough to let me organise my work without a sense of unnecessary overload." },
+    ],
+    openQuestion: "Qu'est-ce qui vous aiderait le plus à mieux réguler votre charge de travail au quotidien ?",
+    openQuestionEn: "What would help you most to better manage your daily workload?",
+  },
+
+  // ── AXE 13 — Qualité du management de proximité ─────────────────────────────
+  {
+    id: 13,
+    dimension: "Cohérence managériale",
+    dimensionEn: "Managerial Coherence",
+    title: "Management de proximité",
+    titleEn: "Direct Management Quality",
+    items: [
+      { text: "Mon manager me donne des retours réguliers qui m'aident concrètement à progresser dans mon travail.", textEn: "My manager gives me regular feedback that concretely helps me improve in my work." },
+      { text: "Lorsque je rencontre une difficulté, mon manager est disponible et m'apporte un soutien concret pour avancer.", textEn: "When I face a difficulty, my manager is available and provides concrete support to help me move forward." },
+      { text: "Mon manager m'exprime clairement ce qu'il attend de moi, ce qui me permet de savoir où concentrer mes efforts.", textEn: "My manager clearly communicates what is expected of me, allowing me to know where to focus my efforts." },
+      { text: "Mon manager reconnaît mes contributions de façon sincère et adaptée à ce que j'accomplis réellement.", textEn: "My manager acknowledges my contributions in a genuine way that reflects what I actually accomplish." },
+    ],
+    openQuestion: "Quelle est la pratique managériale qui aurait le plus d'impact positif sur votre engagement au travail ?",
+    openQuestionEn: "Which management practice would have the most positive impact on your engagement at work?",
+  },
+
+  // ── AXE 14 — Droit à la déconnexion & frontières travail-vie ────────────────
+  {
+    id: 14,
+    dimension: "Maturité sociale",
+    dimensionEn: "Social Maturity",
+    title: "Droit à la déconnexion",
+    titleEn: "Right to Disconnect",
+    items: [
+      { text: "Dans mon équipe, il est admis et respecté de ne pas répondre aux messages professionnels en dehors de mes heures de travail.", textEn: "In my team, it is accepted and respected not to respond to professional messages outside my working hours." },
+      { text: "Mon organisation m'a communiqué des règles claires sur les plages horaires où je suis attendu(e) joignable.", textEn: "My organisation has communicated clear guidelines about the time windows when I am expected to be reachable." },
+      { text: "Mes temps de repos (soirées, week-ends, congés) me permettent de me ressourcer pleinement, sans intrusion du travail.", textEn: "My rest periods (evenings, weekends, holidays) allow me to fully recharge without work intruding." },
+      { text: "Mon manager donne l'exemple en respectant lui-même les frontières entre temps de travail et temps personnel.", textEn: "My manager leads by example by respecting the boundaries between working time and personal time." },
+    ],
+    openQuestion: "Qu'est-ce qui favoriserait davantage votre capacité à vous déconnecter du travail et à préserver vos temps personnels ?",
+    openQuestionEn: "What would further support your ability to disconnect from work and protect your personal time?",
+  },
+];
+
 export const DIMENSIONS = [
   { id: 1, name: "Alignement stratégique", nameEn: "Strategic Alignment", axes: [1, 6] },
-  { id: 2, name: "Cohérence managériale", nameEn: "Managerial Coherence", axes: [2, 4] },
+  { id: 2, name: "Cohérence managériale", nameEn: "Managerial Coherence", axes: [2, 4, 13] },
   { id: 3, name: "Architecture organisationnelle", nameEn: "Organizational Architecture", axes: [3] },
   { id: 4, name: "Dynamique collective", nameEn: "Collective Dynamics", axes: [8, 10] },
-  { id: 5, name: "Soutenabilité de la performance", nameEn: "Performance Sustainability", axes: [7, 11] },
-  { id: 6, name: "Maturité sociale", nameEn: "Social Maturity", axes: [5, 9] },
+  { id: 5, name: "Soutenabilité de la performance", nameEn: "Performance Sustainability", axes: [7, 11, 12] },
+  { id: 6, name: "Maturité sociale", nameEn: "Social Maturity", axes: [5, 9, 14] },
 ];
 
 export const SCALE_FR = [
