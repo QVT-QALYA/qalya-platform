@@ -175,7 +175,6 @@ export const AXES: Axe[] = [
     openQuestion: "Face aux derniers changements majeurs, qu'a le plus facilité ou freiné l'adaptation collective ?",
     openQuestionEn: "Regarding recent major changes, what most enabled or hindered collective adaptation?",
   },
-];
 
   // ── AXE 12 — Charge & Régulation de l'effort ───────────────────────────────
   {
